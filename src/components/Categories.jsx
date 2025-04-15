@@ -85,13 +85,25 @@ export default function Categories() {
           <div className="catRight">
             <div className="rightUp">
               <h2 className="rightHeader">Products</h2>
+
               <div className="searchDiv">
                 <input type="text" name='searchBar' className='searchBar' placeholder='table...'/>
                 <NavLink to='/cart' className='navlink'>
                   <Icon path={mdiCartOutline} size={1} className='cartIcon' title='Go to cart' />
                 </NavLink>
               </div>
+
+              <div className="catBtns">
+                <button className="catBtnSm" onClick={() => {catFilter('chair')}}>Chair</button>
+                <button className="catBtnSm" onClick={() => {catFilter('sofa')}}>Sofa</button>
+                <button className="catBtnSm" onClick={() => {catFilter('lamp')}}>Lamp</button>
+                <button className="catBtnSm" onClick={() => {catFilter('mirror')}}>Mirror</button>
+                <button className="catBtnSm" onClick={() => {catFilter('stool')}}>Stool</button>
+                <button className="catBtnSm" onClick={() => {catFilter('kitchen')}}>Kitchen</button>
+                <button className="catBtnSm" onClick={() => {catFilter('garden')}}>Garden</button>
+              </div>
             </div>
+
             <div className="rightDown">
               <ul className="productList">
                 {data.filter((product, index, self) => {
