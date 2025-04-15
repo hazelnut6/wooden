@@ -1,0 +1,44 @@
+nav {
+    position: fixed;
+    width: calc(100vw - 15px);
+    height: 10vh;
+}
+
+.homeContent {
+    height: 100vh;
+    background-image: url('/images/home-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.webName {
+    font-family: 'Libre Caslon Text';
+    font-style: italic;
+    font-size: 4rem;
+    color: #FAFAFA;
+}
+
+.shopBtn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: rgb(178, 160, 98);
+    border-radius: 50px;
+    border: none;
+}
+
+.shopBtn:hover {
+    background-color: rgb(178, 160, 98, 0.8);
+}
+
+.shopBtnLink {
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+

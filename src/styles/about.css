@@ -1,0 +1,211 @@
+nav {
+    position: fixed;
+    width: calc(100vw - 15px);
+    height: 10vh;
+    z-index: 1;
+}
+
+.aboutContent {
+    padding-top: 10vh;
+    width: calc(100vw - 15px);
+}
+
+.sectOne,
+.sectTwo,
+.sectThree,
+.sectFour {
+    height: 60vh;
+    width: calc(100vw - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectTwo {
+    margin-top: 18vh;
+}
+
+.sectThree,
+.sectFour {
+    margin-top: 30vh
+}
+
+.oneLeft,
+.twoRight,
+.threeLeft {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneRight,
+.twoLeft,
+.threeRight {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.oneLeft h1 {
+    width: 70%;
+    font-family: 'Libre Caslon Text';
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.stool {
+    height: 400px;
+    transform: rotate(-25deg);
+}
+
+.twoLeft {
+    background-image: url('/images/lumbers.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.twoRight {
+    background-color: #907159;
+}
+
+.twoRight p {
+    width: 70%;
+    text-indent: 15px;
+}
+
+.threeRight {
+    background-image: url('/images/tools.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.threeLeft {
+    background-color: #e6f4f1;
+}
+
+.threeLeft p {
+    width: 70%;
+    text-indent: 15px;
+}
+
+.sectFour {
+    height: 100vh;
+    background-image: url('/images/wooden-furnitures.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sectFour p {
+    margin-top: auto;  
+    padding: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* sm */
+@media (width <= 640px) {
+    .aboutDiv {
+        overflow-x: hidden;
+    }
+
+    nav {
+        width: 100vw;
+    }
+
+    .aboutContent {
+        width: 100vw;
+        padding-top: 10vh;
+    }
+
+    .sectOne,
+    .sectTwo,
+    .sectThree {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sectFour {
+        width: 100vw;
+    }
+
+    .oneLeft,
+    .twoRight,
+    .threeLeft {
+        height: 50%;
+        width: 100%;
+    }
+
+    .oneRight,
+    .twoLeft,
+    .threeRight {
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .twoRight p {
+        width: 85%;
+    }
+
+    .threeLeft p {
+        width: 85%;
+    }
+
+    .sectFour {
+        background-position: right;
+    }
+}
+
+/* md */
+@media (645px<= width < 1024px) {
+    .aboutDiv {
+        overflow-x: hidden;
+    }
+
+    nav {
+        width: 100vw;
+    }
+
+    .aboutContent {
+        width: 100vw;
+        padding-top: 10vh;
+    }
+
+    .sectOne,
+    .sectTwo,
+    .sectThree {
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .oneRight,
+    .twoLeft,
+    .threeRight {
+        justify-content: center;
+    }
+
+    .oneRight {
+        justify-content: right;
+    }
+
+    .twoRight p {
+        width: 80%;
+    }
+
+    .threeLeft p {
+        width: 80%;
+    }
+
+    .sectFour {
+        height: 65vh;
+        width: 100vw;
+    }
+}

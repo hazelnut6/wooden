@@ -1,0 +1,141 @@
+nav {
+    position: fixed;
+    width: calc(100vw - 15px);
+    height: 10vh;
+}
+
+.contactContent {
+    padding-top: 10vh;
+    height: 100vh;
+    width: calc(100vw - 15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactHeader {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactHeader p {
+    width: 70%;
+    text-indent: 15px;
+}
+
+form {
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #444c00;
+}
+
+.email,
+textarea {
+    width: 20vw;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.email {
+    border-style: none;
+    border: 1px solid #444c00;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid #444c00;
+}
+
+.sendBtn {
+    font-size: 1rem;
+    padding: 5px 30px;
+    border-style: none;
+    background-color: #444c00;
+    color: white;
+    border-radius: 5px;
+}
+
+.sendBtn:hover {
+    cursor: pointer;
+    background-color: rgb(68, 76, 0, 0.9);
+    transition: .5 ease-in-out;
+}
+
+.mediaLinks {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+.mediaLinksIcon:hover {
+    color: #444c00;
+}
+
+.contactFooter {
+    padding: 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* sm */
+@media (width <= 640px) {
+    .contactContent {
+        width: 100vw;
+    }
+
+    .contactHeader p {
+        width: 95%;
+        text-align: center;
+    }
+
+    form {
+        height: 40vh;
+        width: 80vw;
+    }
+    
+    .email, textarea {
+        width: 60vw;
+    }
+}
+
+/* md */
+@media (645px<= width < 1024px) {
+    nav {
+        width: 100vw;
+    }
+
+    .contactContent {
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+
+    .contactHeader p {
+        width: 80%;
+        text-align: center;
+    }
+
+    form {
+        height: 40vw;
+        width: 60vw;
+    }
+
+    .email, textarea {
+        width: 40vw;
+    }
+}

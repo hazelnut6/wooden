@@ -1,0 +1,248 @@
+* {
+    font-family: 'Montserrat';
+}
+
+.loadingHeader,
+.errorHeader {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.catDiv {
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    position: fixed;
+    width: calc(100vw - 15px) ;
+    height: 10vh;
+}
+
+.catContent{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
+    overflow-x: hidden;
+}
+
+.catLeft {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    border-right: 1px solid black;
+    padding: 5px;
+    position: fixed;
+    width: 250px;
+    height: 90vh;
+}
+
+.asideHeader {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.catList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.catBtn {
+    font-size: 1rem;
+    padding: 7px 0;
+    width: 80%;
+    border-style: none;
+    border: 1px solid #444c00;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.catBtn:hover {
+    background-color: #444c00;
+    cursor: pointer;
+    color: white;
+    transition: .5 ease-in-out;
+}
+
+.catRight {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    max-height: 100vh;
+}
+
+.rightUp {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchDiv {
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchBar {
+    width: 25vw;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border-style: none;
+    border: 1px solid #444c00;
+}
+
+.rightDown {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+}
+
+.productList {
+    height: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    place-content: center;
+    gap: 10px;
+}
+
+.productDiv{
+    height: 100%;
+    width: 220px;
+    border: 1px solid #444c00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.imgDiv {
+    width: 95%;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+}
+
+.ctaDiv {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: auto;
+}
+
+.ctaBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catAddBtn {
+    color: white;
+    font-size: 1rem;
+    border-style: none;
+    background-color: #444c00;
+    padding: 5px 30px;
+    border-radius: 5px;
+}
+
+.catAddBtn:hover {
+    background-color: rgb(68, 76, 0, 0.9);
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+.viewBtn {
+    color: white;
+    font-size: 1rem;
+    border-style: none;
+    background-color: #444c00;
+    padding: 0px 8px;
+    border-radius: 5px;
+}
+
+.viewBtn:hover{
+    background-color: rgb(68, 76, 0, 0.9);
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
+/* MEDIA QUERIES */
+@media (width <= 640px) {
+    .catContent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .catLeft {
+        display: none;
+    }
+
+    .searchDiv {
+        height: 100%;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .searchBar {
+        width: 45vw;
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 50px;
+        border-style: none;
+        border: 1px solid #444c00;
+    }
+
+    .productList {
+        height: 100%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 170px);
+        place-content: center;
+        gap: 10px;
+    }
+    
+    .productDiv{
+        height: 100%;
+        width: 170px;
+        border: 1px solid #444c00;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        border-radius: 5px;
+    }
+
+    .catAddBtn {
+        color: white;
+        font-size: 1rem;
+        border-style: none;
+        background-color: #444c00;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+}
