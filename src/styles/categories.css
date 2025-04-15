@@ -106,6 +106,10 @@ nav {
     border: 1px solid #444c00;
 }
 
+.catBtns {
+    display: none;
+}
+
 .rightDown {
     grid-column: 1/-1;
     grid-row: 2/-1;
@@ -197,9 +201,43 @@ nav {
         display: none;
     }
 
+    .catRight {
+        gap: 90px;
+    }
+
+    .rightUp {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 90px;
+    }
+
+    .rightHeader {
+        display: none;
+    }
+
+    .catBtns {
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .catBtnSm {
+        padding: 5px 10px;
+        border-style: none;
+        border: 1px solid #444c00;
+        background-color: transparent;
+        border-radius: 50px;
+    }
+
     .searchDiv {
         height: 100%;
-        width: 60vw;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -207,7 +245,7 @@ nav {
     }
 
     .searchBar {
-        width: 45vw;
+        width: 80vw;
         font-size: 1rem;
         padding: 5px 10px;
         border-radius: 50px;
@@ -244,5 +282,69 @@ nav {
         background-color: #444c00;
         padding: 5px 8px;
         border-radius: 5px;
+    }
+}
+
+/* md */
+@media (645px<= width < 1024px) {
+    .catContent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .catLeft {
+        display: none;
+    }
+
+    .catRight {
+        gap: 60px;
+    }
+
+    .rightUp {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 60px;
+    }
+
+    .rightHeader {
+        display: none;
+    }
+
+    .catBtns {
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .catBtnSm {
+        padding: 5px 20px;
+        border-style: none;
+        border: 1px solid #444c00;
+        background-color: transparent;
+        border-radius: 50px;
+    }
+
+    .searchDiv {
+        height: 100%;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .searchBar {
+        width: 50vw;
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 50px;
+        border-style: none;
+        border: 1px solid #444c00;
     }
 }
