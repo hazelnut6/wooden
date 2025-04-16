@@ -98,6 +98,25 @@ nav {
     transition: .5 ease-in-out;
 }
 
+.cartLink {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .cartLinkSpan {
+    position: absolute;
+    top: -10px; 
+    right: -10px;
+    background-color: #444c00;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.7em;
+    min-width: 10px;
+    text-align: center;
+}
+
 .detailDesc {
     grid-column: 7/11;
     grid-row: 4/8;
