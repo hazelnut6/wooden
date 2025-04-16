@@ -41,7 +41,9 @@ export default function ProductDetails() {
   }, [productName]);
 
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, clicked } = useContext(CartContext);
+
+  const itemCount = clicked.reduce((total, item) => total + item.quantity, 0);
 
 
   if(loading) {
@@ -86,8 +88,11 @@ export default function ProductDetails() {
 
               <div className="cartDiv">
                 <button className="addBtn" onClick={() => {addToCart(detailsData[0])}}>Add to cart</button>
-                <NavLink to='/cart'>
-                  <Icon path={mdiCartOutline} size={1} color='black' className='cartIcon' title='Go to cart' />
+                <NavLink to='/cart' className='cartLink'>
+                  <Icon path={mdiCartOutline} size={1.1} color='black' className='cartIcon' title='Go to cart' />
+                  {itemCount > 0 && (
+                    <span className='cartLinkSpan'>{itemCount}</span>
+                  )}
                 </NavLink>
               </div>
             </div>
