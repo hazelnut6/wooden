@@ -15,10 +15,9 @@ export const CartProvider = ({children}) => {
         const inCart = clicked.find(c => c.id === item.id);
 
         if(inCart) {
-            alert('Already in cart')
+            alert('Already in cart...❤')
         } else {
             setClicked([...clicked, {...item, quantity: 1}]);
-            alert('Added to cart...❤');
         }
     }
 
