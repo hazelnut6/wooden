@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from 'react'
 import { CartContext } from "./context/CartContext";
 import { NavLink } from 'react-router-dom';
 import Icon from '@mdi/react';
-import { mdiEyeOutline, mdiCartOutline } from '@mdi/js';
+import { mdiEyeOutline } from '@mdi/js';
 import Nav from './Nav'
 import '../styles/categories.css'
 
@@ -38,6 +38,10 @@ export default function Categories() {
   function catFilter(cat) {
     setLoading(true);
     furniture(10, cat)
+  }
+
+  function handleClick() {
+    alert('For sample only. \nTry the categories buttons instead, for filter ;)')
   }
 
   if(loading) {
@@ -88,9 +92,7 @@ export default function Categories() {
 
               <div className="searchDiv">
                 <input type="text" name='searchBar' className='searchBar' placeholder='table...'/>
-                <NavLink to='/cart' className='navlink'>
-                  <Icon path={mdiCartOutline} size={1} className='cartIcon' title='Go to cart' />
-                </NavLink>
+                <button type='button' className="searchBtn" onClick={() => {handleClick()}}>Search</button>
               </div>
 
               <div className="catBtns">

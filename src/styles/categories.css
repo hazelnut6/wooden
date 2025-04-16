@@ -106,6 +106,22 @@ nav {
     border: 1px solid #444c00;
 }
 
+.searchBtn {
+    font-size: 1rem;
+    border-style: none;
+    background-color: #444c00;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+.searchBtn:hover {
+    background-color: rgb(68, 76, 0, .9);
+    cursor: pointer;
+    transition: .5 ease-in-out;
+}
+
 .catBtns {
     display: none;
 }
@@ -245,12 +261,17 @@ nav {
     }
 
     .searchBar {
-        width: 80vw;
+        width: 70vw;
         font-size: 1rem;
         padding: 5px 10px;
         border-radius: 50px;
         border-style: none;
         border: 1px solid #444c00;
+    }
+
+    .searchBtn {
+        background-color: #444c00;
+        color: white;
     }
 
     .productList {
@@ -346,5 +367,10 @@ nav {
         border-radius: 50px;
         border-style: none;
         border: 1px solid #444c00;
+    }
+
+    .searchBtn {
+        background-color: #444c00;
+        color: white;
     }
 }
